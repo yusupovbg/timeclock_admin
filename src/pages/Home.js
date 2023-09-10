@@ -38,7 +38,7 @@ const Home = () => {
   const fetchClockData = async () => {
     try {
         var formattedDate = formatDateYMD(selectedDate)
-        const response = await axios.get(`http://52.78.236.151:8000/api/date/${formattedDate}`);
+        const response = await axios.get(`http://52.78.236.151/api/date/${formattedDate}`);
         console.log(response.data)
         setClockData(response.data);
     } catch (error) {

@@ -63,7 +63,7 @@ function EmployeeDetail() {
 
   const fetchEmployee = async () => {
     try {
-      const response = await axios.get(`http://52.78.236.151:8000/api/user/${id}/`);
+      const response = await axios.get(`http://52.78.236.151/api/user/${id}/`);
       setEmployee(response.data);
 
       setFormData({
@@ -111,7 +111,7 @@ function EmployeeDetail() {
 
   const updateTime = async (id, time) => {
     try {
-      const response = await axios.put(`http://52.78.236.151:8000/api/update/week/${id}/`, {
+      const response = await axios.put(`http://52.78.236.151/api/update/week/${id}/`, {
         start_time: `${time.startHour}:${time.startMinute}:00`,
       });
 
@@ -123,7 +123,7 @@ function EmployeeDetail() {
 
   const updateUsername = async (username) => {
     try {
-      await axios.put(`http://52.78.236.151:8000/api/users/update/${id}/`, {
+      await axios.put(`http://52.78.236.151/api/users/update/${id}/`, {
         username,
       });
       fetchEmployee();
@@ -134,7 +134,7 @@ function EmployeeDetail() {
 
   const updatePin = async (pin) => {
     try {
-      await axios.put(`http://52.78.236.151:8000/api/users/update/${id}/`, {
+      await axios.put(`http://52.78.236.151/api/users/update/${id}/`, {
         pin,
       });
       fetchEmployee();
@@ -145,7 +145,7 @@ function EmployeeDetail() {
 
   const updateWage = async (hourly_wage) => {
     try {
-      await axios.put(`http://52.78.236.151:8000/api/users/update/${id}/`, {
+      await axios.put(`http://52.78.236.151/api/users/update/${id}/`, {
         hourly_wage,
       });
       fetchEmployee();

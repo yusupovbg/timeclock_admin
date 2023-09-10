@@ -12,7 +12,7 @@ export default function Employee() {
 
   const fetchUsers = async (name) => {
     try {
-        const response = await axios.get(`http://52.78.236.151:8000/api/users/`, {
+        const response = await axios.get(`http://52.78.236.151/api/users/`, {
         });
         console.log(response.data)
         setUsers(response.data);
@@ -24,7 +24,7 @@ export default function Employee() {
     const handleDeleteUser = async (userId) => {
         try {
           // Send a DELETE request to your API to delete the user with the given ID
-          await axios.delete(`http://52.78.236.151:8000/api/users/${userId}/`);
+          await axios.delete(`http://52.78.236.151/api/users/${userId}/`);
           // After successful deletion, fetch the updated user list
           fetchUsers();
         } catch (error) {

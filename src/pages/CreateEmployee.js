@@ -98,7 +98,7 @@ function UserForm() {
         console.log(userData);
 
         // Send a POST request to your Django API endpoint to create a new user
-        const response = await axios.post('http://52.78.236.151:8000/api/users/', userData);
+        const response = await axios.post('http://52.78.236.151/api/users/', userData);
 
         if (response.status === 201) {
           setSuccess(true);
